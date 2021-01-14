@@ -1,0 +1,190 @@
+{
+	"pages": [
+		//pages数组中第一项表示应用启动页
+		{
+			"path": "pages/Home/home",
+			"style": {
+				"navigationBarTitleText": "小医在诊 — 首页",
+				"navigationStyle": "custom"
+				
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "小医在诊 — 登录",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/login/Model/register",
+			"style": {
+				"navigationBarTitleText": "小医在诊 — 免费注册",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/login/Model/reset_password",
+			"style": {
+				"navigationBarTitleText": "小医在诊 — 密码重置",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/login/Model/user_agreement",
+			"style": {
+				"navigationBarTitleText": "小医在诊 — 用户协议",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/Home/Model/search",
+			"style": {
+				"navigationBarTitleText": "首页 — 搜索",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/Home/Model/service",
+			"style": {
+				"navigationBarTitleText": "首页 — 高端就医",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/Home/Model/InformationDetails",
+			"style": {
+				"navigationBarTitleText": "消息 — 消息详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/Home/Model/DoctorDetails",
+			"style": {
+				"navigationBarTitleText": "首页 — 专家名医",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/Home/Model/OnlineinQuiry",
+			"style": {
+				"navigationBarTitleText": "名医在线 — 在线问诊",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/Home/Model/SelectPatient",
+			"style": {
+				"navigationBarTitleText": "在线问诊 — 选择患者",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/Home/Model/InquiryPay",
+			"style": {
+				"navigationBarTitleText": "在线问诊 — 问诊支付",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/Home/Model/AddPatient",
+			"style": {
+				"navigationBarTitleText": "选择患者 — 添加患者",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/Home/Model/EditPatient",
+			"style": {
+				"navigationBarTitleText": "选择患者 — 患者修改",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/Information/Information",
+			"style": {
+				"navigationBarTitleText": "小医在诊 — 资讯",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/Shop/shop",
+			"style": {
+				"navigationBarTitleText": "小医在诊 — 商城",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/My/My",
+			"style": {
+				"navigationBarTitleText": "小医在诊 — 我的",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/My/Model/ModifiedData",
+			"style": {
+				"navigationBarTitleText": "我的 — 修改资料",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/My/Model/Authentication",
+			"style": {
+				"navigationBarTitleText": "我的 — 实名认证",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/My/Model/Myorder",
+			"style": {
+				"navigationBarTitleText": "我的 — 我的订单",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/My/Model/OrderDetails",
+			"style": {
+				"navigationBarTitleText": "我的订单 — 订单详情",
+				"navigationStyle": "custom"
+			}
+		}
+		
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "小医在诊",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"app-plus":{
+			"scrollIndicator":"none" //不显示滚动条
+		}
+	},
+	"tabBar": {
+		"color": "#169bd5",
+		"selectedColor": "#d81e06",
+		"backgroundColor": "#FFFFFF",
+		"borderStyle": "white",
+		"list": [{
+			"pagePath": "pages/Home/home",
+			"iconPath": "static/img/home.png",
+			"selectedIconPath": "static/img/home_active.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/Information/Information",
+			"iconPath": "static/img/information.png",
+			"selectedIconPath": "static/img/information_active.png",
+			"text": "资讯"
+		}, {
+			"pagePath": "pages/Shop/shop",
+			"iconPath": "static/img/shop.png",
+			"selectedIconPath": "static/img/shop_active.png",
+			"text": "商城"
+		}, {
+			"pagePath": "pages/My/My",
+			"iconPath": "static/img/my.png",
+			"selectedIconPath": "static/img/my_active.png",
+			"text": "我的"
+		}]
+	}
+}
