@@ -1,6 +1,6 @@
-// const baseUrl = 'https://test.xiaoyiyiliao.com:8000' //服务器地址
+const baseUrl = 'https://test.xiaoyiyiliao.com:8000' //服务器地址
 // const baseUrl = 'http://192.168.0.177:8001' //王健后端联调地址1
-const baseUrl = 'http://192.168.0.215:8001' //梁林生联调地址2
+// const baseUrl = 'http://192.168.0.215:8001' //梁林生联调地址2
 
 const showToast = (title) => {
     uni.showToast({

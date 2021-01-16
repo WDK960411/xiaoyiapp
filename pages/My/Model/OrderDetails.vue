@@ -24,7 +24,7 @@
 				</view>
 			</view>
 		</view>
-		<view class="footer" v-if="order.payStatus === 2||order.payStatus === 0">
+		<view class="footer" v-if="order.status === 2||order.status === 0">
 			<view class="price">
 				<view class="price_left">
 					支付金额：
@@ -63,6 +63,7 @@
 							// console.log(res)
 							that.order = res.data
 							console.log('订单',that.order)
+							console.log('订单',that.order.status)
 						},
 						fail: err => {
 							uni.showToast({

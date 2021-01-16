@@ -6,7 +6,10 @@
 				<view class="head_location">
 						<!-- 三级联动 -->
 						<pick-regions :defaultRegion="defaultRegionCode"  @getRegion="handleGetRegion">
-							<image src="../../static/img/Home/icon_pic/region.png" class="region" v-if="show"></image>
+							<image src="../../static/img/Home/icon_pic/region.png" class="region_sign" v-if="sign"></image>
+							<view class="region_text" v-if="show">
+								{{regiondefaul}}
+							</view>
 							<view class="text">
 								{{regionName}}
 							</view>
@@ -263,20 +266,39 @@
 			})
 			//获取当前
 			uni.getLocation({
-			    type: 'wgs84',
+			    type: 'gcj02',
 			    success: function (res) {
 			        console.log('当前位置的经度：' + res.longitude);
 			        console.log('当前位置的纬度：' + res.latitude);
+					let that = this
+					const GetDoctor = http('/yl/gps/parse', {
+						data:{
+							lon:res.longitude,
+							lat:res.latitude
+						},
+					    success: res => {
+							that.sign = false
+							that.show = true
+							that.regiondefaul = res.data.city.slice(0,2)
+							console.log('that.regiondefaul',that.regiondefaul)
+						},
+						fail: err => {
+							uni.showToast({
+								title: res.msg,
+								icon: "none"
+							});
+						}
+					})
 			    }
 			});
-			uni.getStorage({
-			    key: 'region',
-			    success: function (res) {
-					this.show = false
-					this.region = res.data
-					this.down = true
-			    }
-			});
+			// uni.getStorage({
+			//     key: 'region',
+			//     success: function (res) {
+			// 		this.show = false
+			// 		this.region = res.data
+			// 		this.down = true
+			//     }
+			// });
 		},
 		data() {
 			return {
@@ -295,9 +317,11 @@
 				},
 				current: 0,
 				mode: 'round',
-				show: true,
+				show: false,
 				down: false,
+				sign:true,
 				type: 2,
+				regiondefaul:'',
 				region:[],
 				// defaultRegion:['山东省','济南市','市中区'],
 				// defaultRegionCode:'370103',
@@ -402,6 +426,7 @@
 			},
 			// 获取选择的地区
 			handleGetRegion(region){
+				this.sign = false
 				this.show = false
 				this.region = region
 				this.down = true
@@ -480,13 +505,21 @@
 					text-align: center;
 					line-height: 60rpx;
 					margin-left: 10rpx;
-					.region{
+					.region_sign{
 						width: 35rpx;
 						height: 35rpx;
 						background-size: cover;
 						position: absolute;
 						top: 10rpx;
 						left: 35rpx;
+					}
+					.region_text{
+						width: 55rpx;
+						height: 35rpx;
+						font-size: 22rpx;
+						color: #d3da41;
+						font-weight: 600;
+						margin-left: 20rpx;
 					}
 					.text{
 						width: 50rpx;

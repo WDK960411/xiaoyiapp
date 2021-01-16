@@ -279,8 +279,8 @@
 						        // console.log('info',info);
 								//图片的本地文件路径列表
 								uni.uploadFile({
-									// url: 'https://test.xiaoyiyiliao.com:8000/yl/qiNiuFile/upload',   //服务器地址
-									url: 'http://192.168.0.215:8001/yl/qiNiuFile/upload', //梁林生地址1
+									url: 'https://test.xiaoyiyiliao.com:8000/yl/qiNiuFile/upload',   //服务器地址
+									// url: 'http://192.168.0.215:8001/yl/qiNiuFile/upload', //梁林生地址1
 									// url: 'http://192.168.0.177:8001/yl/qiNiuFile/upload', //王健联调地址2
 									headers:{
 										'Content-Type':'multipart/form-data'

@@ -161,9 +161,9 @@
 								let info =  res;
 								//图片的本地文件路径列表
 								uni.uploadFile({
-									// url: 'https://test.xiaoyiyiliao.com:8000/yl/user/upload/idCard',   //服务器地址
+									url: 'https://test.xiaoyiyiliao.com:8000/yl/user/upload/idCard',   //服务器地址
 									// url: 'http://192.168.0.177:8001/yl/user/upload/idCard', //王健联调地址1
-									url: 'http://192.168.0.215:8001/yl/user/upload/idCard', //梁林生联调地址2
+									// url: 'http://192.168.0.215:8001/yl/user/upload/idCard', //梁林生联调地址2
 									headers:{
 										'Content-Type':'multipart/form-data'
 									},

@@ -68,10 +68,10 @@
 		},
 		data() {
 			return {
-				// phone:'',
-				// password:'',
-				phone:'17606419601',//仅用于联调 手机号写死
-				password:'wdk123456',//仅用于联调 密码写死
+				phone:'',
+				password:'',
+				// phone:'17606419601',//仅用于联调 手机号写死
+				// password:'wdk123456',//仅用于联调 密码写死
 				base64: '',
 				show:false,
 				verification:'',

@@ -9,10 +9,10 @@
 		</view>
 		<view class="uni-dialog-button-group">
 			<view class="uni-dialog-button" @click="close">
-				<text class="uni-dialog-button-text">取消</text>
+				<text class="uni-dialog-button-text" style="color: #007AFF;">取消</text>
 			</view>
 			<view class="uni-dialog-button uni-border-left" @click="onOk">
-				<text class="uni-dialog-button-text uni-button-color">确定</text>
+				<text class="uni-dialog-button-text uni-button-color">拨打电话</text>
 			</view>
 		</view>
 
@@ -149,24 +149,30 @@
 
 <style lang="scss" scoped>
 	.uni-popup-dialog {
-		width: 300px;
+		width: 250px;
 		border-radius: 15px;
 		background-color: #fff;
 	}
 
 	.uni-dialog-title {
 		/* #ifndef APP-NVUE */
-		display: flex;
-		/* #endif */
-		flex-direction: row;
-		justify-content: center;
-		padding-top: 15px;
+		// display: flex;
+		// /* #endif */
+		// flex-direction: row;
+		// justify-content: center;
+		width: 100%;
+		height: 100rpx;
+		padding-top: 30px;
 		padding-bottom: 5px;
+		color: #333333;
 	}
 
 	.uni-dialog-title-text {
-		font-size: 16px;
+		font-size: 36rpx;
 		font-weight: 500;
+		margin-top: 50rpx;
+		margin-left: 30rpx;
+		
 	}
 
 	.uni-dialog-content {
@@ -181,7 +187,8 @@
 
 	.uni-dialog-content-text {
 		font-size: 14px;
-		color: #6e6e6e;
+		// color: #6e6e6e;
+		color: #333333;
 	}
 
 	.uni-dialog-button-group {
@@ -189,9 +196,9 @@
 		display: flex;
 		/* #endif */
 		flex-direction: row;
-		border-top-color: #f5f5f5;
+		border-top-color: #fff;
 		border-top-style: solid;
-		border-top-width: 1px;
+		border-top-width: 0px;
 	}
 
 	.uni-dialog-button {
@@ -209,15 +216,15 @@
 	.uni-border-left {
 		border-left-color: #f0f0f0;
 		border-left-style: solid;
-		border-left-width: 1px;
+		border-left-width: 0px;
 	}
 
 	.uni-dialog-button-text {
-		font-size: 14px;
+		font-size: 16px;
 	}
 
 	.uni-button-color {
-		color: $uni-color-primary;
+		color: #FF3333;
 	}
 
 	.uni-dialog-input {
@@ -238,6 +245,7 @@
 	}
 
 	.uni-popup__info {
-		color: #909399;
+		// color: #909399;
+		color: #333333;
 	}
 </style>

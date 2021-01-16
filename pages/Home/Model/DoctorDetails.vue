@@ -134,11 +134,11 @@
 					</view>
 				</view>
 			</view>
-			<view class="footer_box booked">
+			<view class="footer_box booked" @tap="booked">
 				<view class="iconfont icon-shipin"></view>
 				<view class="title">视频问诊</view>
 			</view>
-			<view class="footer_box service">
+			<view class="footer_box shop" @tap="shop">
 				<view class="iconfont icon-mall" style="font-size: 50rpx;"></view>
 				<view class="title">商城</view>
 			</view>
@@ -385,6 +385,20 @@
 					fail:function(err){
 						that.$refs.popup.open()
 					}
+				});
+			},
+			booked(){
+				uni.showToast({
+					title: '暂未开放',
+					icon: "none",
+					duration:1500
+				});
+			},
+			shop(){
+				uni.showToast({
+					title: '暂未开放',
+					icon: "none",
+					duration:1500
 				});
 			}
 		}
